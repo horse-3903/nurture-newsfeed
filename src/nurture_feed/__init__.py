@@ -1,2 +1,0 @@
-"""Nurture announcements feed package."""
-
