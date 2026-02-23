@@ -4,7 +4,7 @@ Serverless RSS feed generator for the Google OAuth-protected Nurture announcemen
 
 Architecture:
 
-- GitHub Actions runs every 6 hours
+- GitHub Actions runs every hour
 - Restores `auth.json` from `AUTH_JSON` GitHub Secret
 - Uses Playwright with persisted `storage_state`
 - Scrapes announcements
@@ -90,13 +90,13 @@ If email secrets are omitted, feed generation still runs and email is skipped.
 4. Go to `Actions` -> `Generate RSS Feed` -> `Run workflow` to test manually.
 5. Confirm the workflow creates/updates `feed.xml` and `cache.json`.
 
-The workflow also runs automatically every 6 hours via GitHub Actions schedule.
+The workflow also runs automatically every hour via GitHub Actions schedule.
 
 ## 5) Enable GitHub Pages (to host `feed.xml`)
 
 1. In GitHub, open `Settings` -> `Pages`
 2. Set source to `Deploy from a branch`
-3. Choose your default branch (for example `main`) and `/ (root)`
+3. Choose branch `gh-pages` and `/ (root)`
 4. Save
 
 Your RSS feed URL will be:
@@ -175,6 +175,6 @@ def get_selector_config() -> dict[str, list[str]]:
 
 Edit `.github/workflows/rss.yml`:
 
-- Current schedule: `0 */6 * * *` (every 6 hours)
+- Current schedule: `0 * * * *` (every hour)
 
 You can change the cron expression under `on.schedule` to another GitHub Actions schedule interval.

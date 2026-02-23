@@ -2,7 +2,7 @@ name: Generate RSS Feed
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -47,17 +47,40 @@ jobs:
           echo "$AUTH_JSON_B64" | base64 --decode > auth.json
           test -s auth.json
 
+      - name: Restore cache from gh-pages branch (if present)
+        run: |
+          git fetch origin gh-pages || true
+          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
+            git show origin/gh-pages:cache.json > cache.json || true
+            git show origin/gh-pages:feed.xml > feed.xml || true
+          fi
+
       - name: Generate feed and cache (email disabled)
         run: python src/generate_feed.py --skip-email
 
-      - name: Commit and push updates
+      - name: Publish feed and cache to gh-pages branch
         run: |
+          export PUBLISH_DIR="$(mktemp -d)"
+          if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
+            git worktree add "$PUBLISH_DIR" origin/gh-pages
+          else
+            git worktree add -B gh-pages "$PUBLISH_DIR" HEAD
+            cd "$PUBLISH_DIR"
+            git rm -rf . >/dev/null 2>&1 || true
+            cd -
+          fi
+
+          cp feed.xml "$PUBLISH_DIR/feed.xml"
+          cp cache.json "$PUBLISH_DIR/cache.json"
+          touch "$PUBLISH_DIR/.nojekyll"
+
+          cd "$PUBLISH_DIR"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add feed.xml cache.json
+          git add feed.xml cache.json .nojekyll
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No changes to publish."
             exit 0
           fi
           git commit -m "Update RSS feed and cache"
-          git push
+          git push origin HEAD:gh-pages
