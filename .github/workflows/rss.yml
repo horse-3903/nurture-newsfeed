@@ -72,12 +72,13 @@ jobs:
 
           cp feed.xml "$PUBLISH_DIR/feed.xml"
           cp cache.json "$PUBLISH_DIR/cache.json"
+          cp -R src/site/. "$PUBLISH_DIR/"
           touch "$PUBLISH_DIR/.nojekyll"
 
           cd "$PUBLISH_DIR"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add feed.xml cache.json .nojekyll
+          git add feed.xml cache.json index.html post.html styles.css app.js post.js .nojekyll
           if git diff --cached --quiet; then
             echo "No changes to publish."
             exit 0
