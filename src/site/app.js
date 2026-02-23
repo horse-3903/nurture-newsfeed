@@ -7,9 +7,32 @@ const els = {
   updated: document.getElementById("updatedPill"),
   search: document.getElementById("searchInput"),
   template: document.getElementById("cardTemplate"),
+  themeToggle: document.getElementById("themeToggle"),
 };
 
 let allItems = [];
+const THEME_KEY = "nurture-feed-theme";
+
+function getPreferredTheme() {
+  const stored = localStorage.getItem(THEME_KEY);
+  if (stored === "light" || stored === "dark") return stored;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  if (els.themeToggle) {
+    const isDark = theme === "dark";
+    els.themeToggle.textContent = isDark ? "Light mode" : "Dark mode";
+    els.themeToggle.setAttribute("aria-pressed", String(isDark));
+  }
+}
+
+function toggleTheme() {
+  const next = document.body.dataset.theme === "dark" ? "light" : "dark";
+  localStorage.setItem(THEME_KEY, next);
+  applyTheme(next);
+}
 
 function readCacheItems(payload) {
   if (Array.isArray(payload)) return payload;
@@ -136,4 +159,8 @@ async function loadAnnouncements() {
   }
 }
 
+applyTheme(getPreferredTheme());
+if (els.themeToggle) {
+  els.themeToggle.addEventListener("click", toggleTheme);
+}
 loadAnnouncements();

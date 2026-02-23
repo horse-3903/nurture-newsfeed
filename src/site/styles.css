@@ -15,6 +15,20 @@
   --radius: 18px;
 }
 
+body[data-theme="dark"] {
+  --bg: #0b1020;
+  --bg-accent: #0f1730;
+  --surface: rgba(18, 26, 46, 0.82);
+  --surface-strong: #151e35;
+  --text: #e9eefc;
+  --muted: #a4b2ce;
+  --line: rgba(233, 238, 252, 0.08);
+  --shadow: 0 20px 60px rgba(2, 5, 16, 0.45);
+  --shadow-soft: 0 12px 30px rgba(2, 5, 16, 0.28);
+  --danger-bg: rgba(117, 35, 31, 0.28);
+  --danger-text: #ffbeb6;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -97,6 +111,12 @@ a {
   gap: 0.75rem;
 }
 
+.hero__actions {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0.6rem;
+}
+
 .hero__controls input {
   width: 100%;
   border: none;
@@ -122,6 +142,11 @@ a {
   box-shadow: var(--shadow-soft);
   color: var(--text);
   border: 1px solid var(--line);
+}
+
+.rss-link--button {
+  cursor: pointer;
+  font: inherit;
 }
 
 .meta-bar {
@@ -210,7 +235,7 @@ a {
 .card__author {
   display: inline-flex;
   background: rgba(15, 111, 255, 0.05);
-  color: #3b4b67;
+  color: var(--muted);
   border-radius: 999px;
   padding: 0.2rem 0.55rem;
 }
@@ -297,6 +322,10 @@ a {
 
 @media (max-width: 640px) {
   .hero__controls {
+    grid-template-columns: 1fr;
+  }
+  .hero__actions {
+    display: grid;
     grid-template-columns: 1fr;
   }
   .rss-link,
