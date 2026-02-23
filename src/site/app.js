@@ -63,8 +63,13 @@ function renderCards(items) {
     const titleEl = node.querySelector(".card__title");
     const descEl = node.querySelector(".card__desc");
 
-    link.href = `./post.html?id=${encodeURIComponent(item.id)}`;
-    link.setAttribute("aria-label", `Open announcement: ${item.title || "Untitled"}`);
+    link.href = item.link || "#";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.setAttribute(
+      "aria-label",
+      `Open announcement on Nurture: ${item.title || "Untitled"}`
+    );
 
     dateEl.textContent = formatDisplayDate(item);
     if (item.author) {
@@ -132,4 +137,3 @@ async function loadAnnouncements() {
 }
 
 loadAnnouncements();
-
