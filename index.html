@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nurture Announcements</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <div class="hero__inner">
+          <p class="eyebrow">Nurture Feed</p>
+          <h1>Announcements</h1>
+          <p class="hero__sub">
+            Live mirror of announcements with RSS export and searchable cards.
+          </p>
+          <div class="hero__controls">
+            <input id="searchInput" type="search" placeholder="Search title or content..." />
+            <a class="rss-link" href="./feed.xml">Open RSS</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="meta-bar" id="metaBar">
+        <span id="countPill" class="pill">Loading...</span>
+        <span id="updatedPill" class="pill pill--muted"></span>
+      </section>
+
+      <section id="errorBox" class="state-card state-card--error hidden" role="alert"></section>
+      <section id="loadingBox" class="state-card">Loading announcements...</section>
+
+      <section id="cardsGrid" class="cards-grid hidden" aria-live="polite"></section>
+      <section id="emptyState" class="state-card hidden">No announcements match your search.</section>
+    </main>
+
+    <template id="cardTemplate">
+      <article class="card">
+        <a class="card__link" href="#">
+          <div class="card__body">
+            <div class="card__meta">
+              <span class="card__date"></span>
+              <span class="card__author hidden"></span>
+            </div>
+            <h2 class="card__title"></h2>
+            <p class="card__desc"></p>
+          </div>
+        </a>
+      </article>
+    </template>
+
+    <script src="./app.js" defer></script>
+  </body>
+  </html>
+
