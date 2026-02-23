@@ -13,6 +13,11 @@ concurrency:
   group: rss-feed-generation
   cancel-in-progress: false
 
+env:
+  PYTHON_VERSION: "3.11"
+  PAGES_BRANCH: gh-pages
+  PLAYWRIGHT_BROWSERS_PATH: ~/.cache/ms-playwright
+
 jobs:
   generate-feed:
     runs-on: ubuntu-latest
@@ -22,20 +27,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements.txt
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('requirements.txt') }}
+
       - name: Install Playwright Chromium
-        run: python -m playwright install --with-deps chromium
+        run: python -m playwright install chromium
 
       - name: Restore Playwright auth state
         env:
@@ -50,33 +63,42 @@ jobs:
 
       - name: Restore cache from gh-pages branch (if present)
         run: |
-          git fetch origin gh-pages || true
-          if git rev-parse --verify origin/gh-pages >/dev/null 2>&1; then
-            git show origin/gh-pages:cache.json > cache.json || true
-            git show origin/gh-pages:feed.xml > feed.xml || true
+          git fetch --depth=1 origin "$PAGES_BRANCH" || true
+          if git rev-parse --verify "origin/$PAGES_BRANCH" >/dev/null 2>&1; then
+            git show "origin/$PAGES_BRANCH:cache.json" > cache.json || true
+            git show "origin/$PAGES_BRANCH:feed.xml" > feed.xml || true
           fi
 
-      - name: Generate feed and cache (email disabled)
-        run: python src/generate_feed.py --skip-email
+      - name: Generate feed and cache
+        env:
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+        run: python src/generate_feed.py
 
-      - name: Publish feed and cache to gh-pages branch
+      - name: Prepare publish worktree
         run: |
-          export PUBLISH_DIR="$(mktemp -d)"
-          if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
-            git worktree add "$PUBLISH_DIR" origin/gh-pages
+          PUBLISH_DIR="$(mktemp -d)"
+          echo "PUBLISH_DIR=$PUBLISH_DIR" >> "$GITHUB_ENV"
+          if git ls-remote --exit-code --heads origin "$PAGES_BRANCH" >/dev/null 2>&1; then
+            git worktree add "$PUBLISH_DIR" "origin/$PAGES_BRANCH"
           else
-            git worktree add -B gh-pages "$PUBLISH_DIR" HEAD
+            git worktree add -B "$PAGES_BRANCH" "$PUBLISH_DIR" HEAD
             cd "$PUBLISH_DIR"
             git rm -rf . >/dev/null 2>&1 || true
             cd -
           fi
 
+      - name: Stage site files for publishing
+        run: |
           cp feed.xml "$PUBLISH_DIR/feed.xml"
           cp cache.json "$PUBLISH_DIR/cache.json"
           cp -R src/site/. "$PUBLISH_DIR/"
           rm -f "$PUBLISH_DIR/post.html" "$PUBLISH_DIR/post.js"
           touch "$PUBLISH_DIR/.nojekyll"
 
+      - name: Commit and push gh-pages
+        run: |
           cd "$PUBLISH_DIR"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -86,4 +108,4 @@ jobs:
             exit 0
           fi
           git commit -m "Update RSS feed and cache"
-          git push origin HEAD:gh-pages
+          git push origin HEAD:"$PAGES_BRANCH"

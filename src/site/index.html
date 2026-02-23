@@ -7,29 +7,52 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="bg-orb bg-orb--a" aria-hidden="true"></div>
+    <div class="bg-orb bg-orb--b" aria-hidden="true"></div>
+
     <main class="page-shell">
-      <header class="hero">
-        <div class="hero__inner">
-          <p class="eyebrow">Nurture Feed</p>
-          <h1>Announcements</h1>
-          <p class="hero__sub">
-            Live mirror of announcements with RSS export and searchable cards.
-          </p>
-          <div class="hero__controls">
-            <input id="searchInput" type="search" placeholder="Search title or content..." />
-            <div class="hero__actions">
-              <button id="themeToggle" class="rss-link rss-link--button" type="button" aria-pressed="false">
-                Dark mode
-              </button>
-              <a class="rss-link" href="./feed.xml">Open RSS</a>
-            </div>
+      <header class="app-header">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">N</div>
+          <div class="brand__copy">
+            <p class="brand__eyebrow">Nurture Feed</p>
+            <h1>Announcements</h1>
           </div>
+        </div>
+        <div class="header-actions">
+          <button id="themeToggle" class="btn btn--ghost" type="button" aria-pressed="false">
+            Dark mode
+          </button>
+          <a class="btn btn--primary" href="./feed.xml">RSS XML</a>
         </div>
       </header>
 
-      <section class="meta-bar" id="metaBar">
-        <span id="countPill" class="pill">Loading...</span>
-        <span id="updatedPill" class="pill pill--muted"></span>
+      <section class="hero-panel">
+        <div class="hero-panel__copy">
+          <p class="hero-panel__kicker">Live mirror</p>
+          <h2>Fast, searchable announcement feed for Nurture</h2>
+          <p>
+            Updated by GitHub Actions, rendered from cached announcement data, and linked directly to the original
+            Nurture announcement pages.
+          </p>
+        </div>
+        <div class="hero-panel__stats" id="metaBar">
+          <div class="stat-card">
+            <span class="stat-card__label">Announcements</span>
+            <span id="countPill" class="stat-card__value">Loading...</span>
+          </div>
+          <div class="stat-card stat-card--wide">
+            <span class="stat-card__label">Last sync</span>
+            <span id="updatedPill" class="stat-card__value stat-card__value--muted"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <label class="search-box" for="searchInput">
+          <span class="search-box__icon" aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search title, content, author, or relative time..." />
+        </label>
       </section>
 
       <section id="errorBox" class="state-card state-card--error hidden" role="alert"></section>
@@ -43,12 +66,13 @@
       <article class="card">
         <a class="card__link" href="#">
           <div class="card__body">
+            <h2 class="card__title"></h2>
+            <p class="card__desc"></p>
             <div class="card__meta">
               <span class="card__date"></span>
               <span class="card__author hidden"></span>
             </div>
-            <h2 class="card__title"></h2>
-            <p class="card__desc"></p>
+            <span class="card__cta" aria-hidden="true">Open ↗</span>
           </div>
         </a>
       </article>
