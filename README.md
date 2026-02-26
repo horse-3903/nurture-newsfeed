@@ -82,6 +82,69 @@ Create these secrets:
 
 If email secrets are omitted, feed generation still runs and email is skipped.
 
+### Easier recipient management (private, recommended)
+
+Keep recipients in the `EMAIL_RECIPIENTS` GitHub Secret, but use a multiline value
+instead of a comma-separated one.
+
+Example secret value:
+
+```txt
+you@example.com
+team@example.com
+# comments are allowed
+```
+
+The app now accepts recipients separated by commas, semicolons, or newlines, and
+it ignores duplicate entries.
+
+Optional local-only workflow (not committed):
+
+- Create `email_recipients.txt` in the repo root (one email per line)
+- It is gitignored and used only if `EMAIL_RECIPIENTS` is not set
+
+Recipient load order:
+
+1. `EMAIL_RECIPIENTS` secret (preferred)
+2. `EMAIL_RECIPIENTS_FILE` path (optional override)
+3. `email_recipients.txt` in the repo root (local/private file)
+
+### Local file -> GitHub Secret sync on commit (optional)
+
+If you want to edit recipients locally and automatically push them into the
+GitHub Actions secret after each commit, use the included local hook setup.
+
+Prerequisites:
+
+- GitHub CLI installed (`gh`)
+- `gh auth login` completed
+- Permission to update repository Actions secrets
+
+1. Create a local `email_recipients.txt` (this file is gitignored):
+
+```txt
+you@example.com
+team@example.com
+```
+
+2. Install the local post-commit hook:
+
+```bash
+python src/install_email_secret_hook.py
+```
+
+3. Make a commit. After each commit, the hook runs:
+
+- `python src/sync_email_recipients_secret.py --skip-if-unchanged --quiet`
+- It updates the `EMAIL_RECIPIENTS` GitHub secret only when the file content changed
+- If sync fails (e.g. `gh` not logged in), your commit still succeeds
+
+Manual sync (any time):
+
+```bash
+python src/sync_email_recipients_secret.py
+```
+
 ## 4) GitHub Actions Deployment
 
 1. Push this repository to GitHub.
@@ -89,6 +152,9 @@ If email secrets are omitted, feed generation still runs and email is skipped.
 3. Enable GitHub Actions for the repo (if prompted).
 4. Go to `Actions` -> `Generate RSS Feed` -> `Run workflow` to test manually.
 5. Confirm the workflow creates/updates `feed.xml` and `cache.json`.
+
+If you want GitHub Actions to use file-based recipients, point `EMAIL_RECIPIENTS_FILE`
+to a file you provision at runtime. Otherwise, use the `EMAIL_RECIPIENTS` secret.
 
 The workflow also runs automatically every hour via GitHub Actions schedule.
 

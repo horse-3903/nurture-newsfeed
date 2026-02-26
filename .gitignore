@@ -208,6 +208,7 @@ __marimo__/
 
 # Local browser auth state for Playwright (never commit)
 auth.json
+email_recipients.txt
 
 # GH Pages Stuff
 feed.xml

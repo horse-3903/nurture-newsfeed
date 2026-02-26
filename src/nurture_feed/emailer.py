@@ -6,7 +6,7 @@ from email.message import EmailMessage
 from .config import TARGET_URL
 from .logging_utils import logger
 from .models import Announcement
-from .utils import parse_recipients
+from .utils import load_recipients
 
 
 def _truncate_email_text(value: str | None, max_len: int = 260) -> str:
@@ -21,7 +21,10 @@ def _truncate_email_text(value: str | None, max_len: int = 260) -> str:
 def send_email_notification(new_items: list[Announcement]) -> bool:
     sender = os.getenv("EMAIL_SENDER")
     password = os.getenv("EMAIL_PASSWORD")
-    recipients = parse_recipients(os.getenv("EMAIL_RECIPIENTS"))
+    recipients = load_recipients(
+        os.getenv("EMAIL_RECIPIENTS"),
+        file_path=os.getenv("EMAIL_RECIPIENTS_FILE"),
+    )
 
     if not new_items:
         return False

@@ -1,5 +1,6 @@
 import hashlib
 import re
+from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from email.utils import format_datetime
 
@@ -8,7 +9,7 @@ try:
 except ImportError:  # pragma: no cover - fallback path when dependency not installed yet
     dateparser = None
 
-from .config import SITE_TIMEZONE
+from .config import RECIPIENTS_FILE, SITE_TIMEZONE
 from .models import Announcement
 
 
@@ -131,7 +132,46 @@ def to_rfc2822(raw_date: str | None) -> str | None:
 def parse_recipients(value: str | None) -> list[str]:
     if not value:
         return []
-    return [email.strip() for email in value.split(",") if email.strip()]
+
+    parts = re.split(r"[\n,;]+", value)
+    recipients: list[str] = []
+    seen: set[str] = set()
+    for part in parts:
+        email = part.strip()
+        if not email or email.startswith("#"):
+            continue
+        normalized = email.lower()
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        recipients.append(email)
+    return recipients
+
+
+def load_recipients(env_value: str | None, *, file_path: str | Path | None = None) -> list[str]:
+    recipients = parse_recipients(env_value)
+    if recipients:
+        return recipients
+
+    path = Path(file_path) if file_path else RECIPIENTS_FILE
+    candidate_paths = [path]
+    if not path.is_absolute():
+        candidate_paths.append(Path(__file__).resolve().parents[2] / path)
+
+    text: str | None = None
+    for candidate in candidate_paths:
+        try:
+            text = candidate.read_text(encoding="utf-8")
+            break
+        except FileNotFoundError:
+            continue
+        except OSError:
+            continue
+
+    if text is None:
+        return []
+
+    return parse_recipients(text)
 
 
 def sort_announcements_for_feed(items: list[Announcement]) -> list[Announcement]:
