@@ -1,4 +1,5 @@
 import argparse
+import base64
 import logging
 import sys
 from pathlib import Path
@@ -32,6 +33,11 @@ def parse_args() -> argparse.Namespace:
         help="Path to write Playwright storage state (default: auth.json).",
     )
     parser.add_argument(
+        "--base64-output",
+        default="auth_json_base64.txt",
+        help="Path to write base64-encoded auth state (default: auth_json_base64.txt).",
+    )
+    parser.add_argument(
         "--browser",
         choices=["chrome", "chromium"],
         default="chrome",
@@ -52,6 +58,11 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     return parser.parse_args()
+
+
+def write_base64_auth_file(auth_path: Path, base64_output_path: Path) -> None:
+    encoded = base64.b64encode(auth_path.read_bytes()).decode("ascii")
+    base64_output_path.write_text(encoded, encoding="ascii")
 
 
 def try_attach_via_cdp(cdp_url: str, target_url: str, output_path: Path) -> int:
@@ -92,10 +103,12 @@ def main() -> int:
     configure_logging()
     args = parse_args()
     output_path = Path(args.output)
+    base64_output_path = Path(args.base64_output)
 
     if args.cdp_url:
         try:
             rc = try_attach_via_cdp(args.cdp_url, args.url, output_path)
+            write_base64_auth_file(output_path, base64_output_path)
         except PlaywrightError as exc:
             logging.error("Playwright CDP attach failed: %s", exc)
             return 1
@@ -103,7 +116,8 @@ def main() -> int:
             logging.error("%s", exc)
             return 1
         logging.info("Saved Playwright storage state to %s", output_path)
-        logging.info("Do not commit this file. Base64 encode it and store as GitHub secret AUTH_JSON.")
+        logging.info("Saved base64-encoded auth state to %s", base64_output_path)
+        logging.info("Do not commit these files. Store the base64 text as GitHub secret AUTH_JSON.")
         return rc
 
     logging.info("Launching browser for manual login: %s", args.url)
@@ -149,8 +163,11 @@ def main() -> int:
         logging.error("Interrupted before saving auth state.")
         return 1
 
+    write_base64_auth_file(output_path, base64_output_path)
+
     logging.info("Saved Playwright storage state to %s", output_path)
-    logging.info("Do not commit this file. Base64 encode it and store as GitHub secret AUTH_JSON.")
+    logging.info("Saved base64-encoded auth state to %s", base64_output_path)
+    logging.info("Do not commit these files. Store the base64 text as GitHub secret AUTH_JSON.")
     return 0
 
 
