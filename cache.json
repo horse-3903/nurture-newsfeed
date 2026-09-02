@@ -1,35 +1,25 @@
 {
-  "updated_at_utc": "2026-09-01T22:12:57.370632+00:00",
+  "updated_at_utc": "2026-09-02T00:41:45.313735+00:00",
   "items": [
-    {
-      "id": "d34a085bb983274e6bd92c8ac9966be463892f7040d1d63b2caf7308c138ceba",
-      "title": "Sin Yee Theng",
-      "link": "https://nurture.diveanalytics.com/announcements/1286",
-      "source_id": "1286",
-      "author": null,
-      "description": "[53HCSC] Teachers' Day Celebrations, 3 September 2026 (please be seated by 0815 h) Hey Hwa Chong! 👋As we approach the end of Term 3, what better way to celebrate our teachers than with an AMAZING concer... 14 hours ago",
-      "pub_date_raw": "14 hours ago",
-      "pub_date": "2026-09-01T16:12:57.311665+08:00"
-    },
     {
       "id": "5727d221e45c5ce4324ffeddb5eaa9c1d0655198baea3dff2ac2971746ff779c",
       "title": "Koo Lay Hwa",
       "link": "https://nurture.diveanalytics.com/announcements/1285",
       "source_id": "1285",
       "author": null,
-      "description": "[Library] Early Closure of libraries on 3 September 15 hours ago",
-      "pub_date_raw": "15 hours ago",
-      "pub_date": "2026-09-01T15:12:57.325060+08:00"
+      "description": "[Library] Early Closure of libraries on 3 September 17 hours ago",
+      "pub_date_raw": "17 hours ago",
+      "pub_date": "2026-09-01T15:41:45.258538+08:00"
     },
     {
-      "id": "f45cbe56f9798116174670f5dddecdf0ce2f28fdb76c6f18a1a18995d6212643",
-      "title": "Tay Lay Keow, June",
-      "link": "https://nurture.diveanalytics.com/announcements/1278",
-      "source_id": "1278",
+      "id": "d34a085bb983274e6bd92c8ac9966be463892f7040d1d63b2caf7308c138ceba",
+      "title": "Sin Yee Theng",
+      "link": "https://nurture.diveanalytics.com/announcements/1286",
+      "source_id": "1286",
       "author": null,
-      "description": "[CCE] One People, One Pen: Essay Competition on Racial & Religious Harmony ✍️ One People, One Pen: Essay Competition on Racial &amp; Religious HarmonyGot strong opinions and a way with words? One... 1 day ago",
-      "pub_date_raw": "1 day ago",
-      "pub_date": "2026-09-01T06:12:57.330673+08:00"
+      "description": "[53HCSC] Teachers' Day Celebrations, 3 September 2026 (please be seated by 0815 h) Hey Hwa Chong! 👋As we approach the end of Term 3, what better way to celebrate our teachers than with an AMAZING concer... 17 hours ago",
+      "pub_date_raw": "17 hours ago",
+      "pub_date": "2026-09-01T15:41:45.240269+08:00"
     },
     {
       "id": "8e64592d7b8b6a841fa8d3a7c22f732d7b9fbd30259af7dee15079f620a50bf4",
@@ -39,7 +29,7 @@
       "author": null,
       "description": "What's New @ NAFA August 2026 New Initiatives in Creative Health &amp; Cultural PolicyNAFA launched two new initiatives in July and August, dedicated... 1 day ago",
       "pub_date_raw": "1 day ago",
-      "pub_date": "2026-09-01T06:12:57.328742+08:00"
+      "pub_date": "2026-09-01T08:41:45.263282+08:00"
     },
     {
       "id": "e47d5802dd271d000ea7e17243355d7df87adb97e2dadbaf4c508574ab6ddc0e",
@@ -49,7 +39,7 @@
       "author": null,
       "description": "SALT Centre Level 3 Gym – Not opened during Sep Holidays Dear Students,Please note that the SALT Centre Level 3 Gym will be not be opened this upcoming September school holiday... 1 day ago",
       "pub_date_raw": "1 day ago",
-      "pub_date": "2026-09-01T06:12:57.326945+08:00"
+      "pub_date": "2026-09-01T08:41:45.260811+08:00"
     },
     {
       "id": "165ce2f461ea97985cf109a12d7775bee5840f6acb5ac1ba8928db765b5bb721",
@@ -59,7 +49,17 @@
       "author": null,
       "description": "2026 Student Feedback Survey on Talent Development & PLP Dear Students,Please take a few minutes to complete the 2026 Student Feedback Form on Talent Development. Your feedback... 2 days ago",
       "pub_date_raw": "2 days ago",
-      "pub_date": "2026-08-31T06:12:57.334733+08:00"
+      "pub_date": "2026-08-31T08:41:45.269880+08:00"
+    },
+    {
+      "id": "f45cbe56f9798116174670f5dddecdf0ce2f28fdb76c6f18a1a18995d6212643",
+      "title": "Tay Lay Keow, June",
+      "link": "https://nurture.diveanalytics.com/announcements/1278",
+      "source_id": "1278",
+      "author": null,
+      "description": "[CCE] One People, One Pen: Essay Competition on Racial & Religious Harmony ✍️ One People, One Pen: Essay Competition on Racial &amp; Religious HarmonyGot strong opinions and a way with words? One... 2 days ago",
+      "pub_date_raw": "2 days ago",
+      "pub_date": "2026-08-31T08:41:45.265498+08:00"
     },
     {
       "id": "ce8a1193a65ae7d25455ce0e3d189bc92280cf80047f252d285d38c249d9d857",
@@ -69,27 +69,7 @@
       "author": null,
       "description": "[ECG] NHG Health Aspiring Doctors Job Shadowing Programme (Dec 2026) Message posted on behalf of NHG HealthNHG Health is glad to announce our next Pre-U student attachment programme, now re... 4 days ago",
       "pub_date_raw": "4 days ago",
-      "pub_date": "2026-08-29T06:12:57.336777+08:00"
-    },
-    {
-      "id": "06cd3e8157a789cab1aa654a37ed76afcbdcd6c454546212c65d5a996c30920c",
-      "title": "Tan Yee Weal",
-      "link": "https://nurture.diveanalytics.com/announcements/1265",
-      "source_id": "1265",
-      "author": null,
-      "description": "CCA Appreciation Week Hey Hwachong! We are the 15th CCA Council, and we are pleased to announce our annual initiative, CCA Appreciation Week (... 5 days ago",
-      "pub_date_raw": "5 days ago",
-      "pub_date": "2026-08-28T06:12:57.340617+08:00"
-    },
-    {
-      "id": "c7f12d00447830fe9e1038dbf90903a5efbe0ec047aa4938871af42f306b6431",
-      "title": "Wang Jingwei",
-      "link": "https://nurture.diveanalytics.com/announcements/1266",
-      "source_id": "1266",
-      "author": null,
-      "description": "[VIA] 📢 VOLUNTEERS WANTED: Project Beyond Barriers! 🌟 Hey Hwa Chongians! Looking for a meaningful Service Learning opportunity to make a direct impact while having fun? Join... 5 days ago",
-      "pub_date_raw": "5 days ago",
-      "pub_date": "2026-08-28T06:12:57.338689+08:00"
+      "pub_date": "2026-08-29T08:41:45.272219+08:00"
     },
     {
       "id": "3365c8b022216005d753ed352db0593ec67cdaa973f1888698a0bf84ed62f180",
@@ -99,7 +79,7 @@
       "author": null,
       "description": "[ECG] University of British Columbia Info Session @ HCI Dear Students,Thinking about studying in Canada?Join us for an information session with the University of British Columb... 5 days ago",
       "pub_date_raw": "5 days ago",
-      "pub_date": "2026-08-28T06:12:57.332718+08:00"
+      "pub_date": "2026-08-28T08:41:45.267687+08:00"
     },
     {
       "id": "d4b8bd38daf8c16f5dbdf427bd0bf9a6c4e1857314acc5c72c529223f4126c9a",
@@ -109,7 +89,27 @@
       "author": null,
       "description": "[ECG] Durham University Info Session @HCI Durham University Information Session @ HCIThinking of applying to Durham? Join us to learn more about one of the UK's l... 5 days ago",
       "pub_date_raw": "5 days ago",
-      "pub_date": "2026-08-28T06:12:57.273379+08:00"
+      "pub_date": "2026-08-28T08:41:45.190913+08:00"
+    },
+    {
+      "id": "06cd3e8157a789cab1aa654a37ed76afcbdcd6c454546212c65d5a996c30920c",
+      "title": "Tan Yee Weal",
+      "link": "https://nurture.diveanalytics.com/announcements/1265",
+      "source_id": "1265",
+      "author": null,
+      "description": "CCA Appreciation Week Hey Hwachong! We are the 15th CCA Council, and we are pleased to announce our annual initiative, CCA Appreciation Week (... 6 days ago",
+      "pub_date_raw": "6 days ago",
+      "pub_date": "2026-08-27T08:41:45.276597+08:00"
+    },
+    {
+      "id": "c7f12d00447830fe9e1038dbf90903a5efbe0ec047aa4938871af42f306b6431",
+      "title": "Wang Jingwei",
+      "link": "https://nurture.diveanalytics.com/announcements/1266",
+      "source_id": "1266",
+      "author": null,
+      "description": "[VIA] 📢 VOLUNTEERS WANTED: Project Beyond Barriers! 🌟 Hey Hwa Chongians! Looking for a meaningful Service Learning opportunity to make a direct impact while having fun? Join... 6 days ago",
+      "pub_date_raw": "6 days ago",
+      "pub_date": "2026-08-27T08:41:45.274390+08:00"
     },
     {
       "id": "32268dd31829dc49f43bf5d60ffdb91cf951fe56e52aaf4ee22ec3142bbf2bde",
@@ -119,7 +119,7 @@
       "author": null,
       "description": "[VIAC] Project Write It Forward stationery donation drive Hey Hwa Chong! 👋VIAC is excited to invite you to participate in Project Write It Forward! ✍️This is a nationwide statio... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.358370+08:00"
+      "pub_date": "2026-08-26T08:41:45.298366+08:00"
     },
     {
       "id": "1ba6e7ebe86bf8783d96ae17a9707bdcf2e5d621544498670e801c6c9728a27c",
@@ -129,7 +129,7 @@
       "author": null,
       "description": "[ECG] Behind the Switch: Powering Singapore’s Future with EMA (Job Taster Programme - 11 September 2026) Dear Students,Please take note of the job taster programme below organised by Energy Market Authority (EMA). Please regi... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.356628+08:00"
+      "pub_date": "2026-08-26T08:41:45.296193+08:00"
     },
     {
       "id": "666e6fb7473423c37f59565ed37364bca0f903362ba4c5d1f1347acd97648390",
@@ -139,7 +139,7 @@
       "author": null,
       "description": "Science Practical Exams - Do not enter cordoned off exam areas Dear Hwa Chong,The Sec 4 Science Practical Examination will take place on T3W9 Mon (24 Aug whole day)T3W9 Wed (26 Aug af... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.354905+08:00"
+      "pub_date": "2026-08-26T08:41:45.294017+08:00"
     },
     {
       "id": "7c239fce92aec06aa53c124c2d4e8238fb43e60fcd9eec64b8b519272b89f726",
@@ -149,7 +149,7 @@
       "author": null,
       "description": "[ECG] Invitation to Focus Group Discussion on AI for Regenerative Built Environments @ SUTD (11 September) Dear Students,We would like to invite you to participate in a Focus Group Discussion (FGD) on the future of AI for Regen... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.353075+08:00"
+      "pub_date": "2026-08-26T08:41:45.291802+08:00"
     },
     {
       "id": "11dbe09b4d5f8ae070a64d64e8eec4276d81ee32881953b281d70c730c244855",
@@ -159,7 +159,7 @@
       "author": null,
       "description": "[ECG] Invitation to Focus Group Discussion on AI for Regenerative Built Environments @ SUTD (11 September) Dear Students,We would like to invite you to participate in a Focus Group Discussion (FGD) on the future of AI for Regen... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.351335+08:00"
+      "pub_date": "2026-08-26T08:41:45.289641+08:00"
     },
     {
       "id": "27456eeb147c54d3b779427df917585519acc51bc20b19ccb733afa960f10bf3",
@@ -169,7 +169,7 @@
       "author": null,
       "description": "PREPMUN School Delegation Registration PREPMUN 2026 will be physically held at Temasek Polytechnic, 21 Tampines Avenue 1, Singapore 529757 from 8th December to... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.347854+08:00"
+      "pub_date": "2026-08-26T08:41:45.285306+08:00"
     },
     {
       "id": "59bcb35b884b58af8ff3640c178b851f8f80583170cd97fc78fd3bf14cf6e4fc",
@@ -179,7 +179,7 @@
       "author": null,
       "description": "[LD] EDB Careers' New Telegram Channel Dear students,We are pleased to share with you that the Economic Development Board (EDB) has recently launched a new Tel... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.346102+08:00"
+      "pub_date": "2026-08-26T08:41:45.283145+08:00"
     },
     {
       "id": "569b5a54ba0b37fcb513cbe8536f4b79b0ea2197b089642e89b4591b9e0b334c",
@@ -189,7 +189,7 @@
       "author": null,
       "description": "[VIA] Dining in the Dark Experience (Sign up) HEY HWA CHONG!! 👋 VIA Council is thrilled to announce our latest batch project, Love Through Our Lens! 🫰🏻In collabora... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.344324+08:00"
+      "pub_date": "2026-08-26T08:41:45.280936+08:00"
     },
     {
       "id": "0bd0157bfb1482ad6e7a0eb90264ec39edf5190752cc881a0cfc942d7d076986",
@@ -199,7 +199,7 @@
       "author": null,
       "description": "[LD] Sign up for Our Army MDES Information Session (4 Sep 2026) Dear C1 and C2 students,We are reaching out to you on behalf of MINDEF, who is organising an information session on thei... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-08-26T06:12:57.342521+08:00"
+      "pub_date": "2026-08-26T08:41:45.278743+08:00"
     },
     {
       "id": "9607b656bd042adb1a8926a9f28336a2261347eaa84816de1f88d79a4655080f",
@@ -209,7 +209,7 @@
       "author": null,
       "description": "Assembly Matters for Terms 3 & 4 Dear students,Please note that this week, Term 3 Week 8 will be the last week that we have assembly &amp; flag raising f... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-08-19T06:12:57.365583+08:00"
+      "pub_date": "2026-08-19T08:41:45.307028+08:00"
     },
     {
       "id": "3588a069cfe05517286bc229a29b3a4220a9a3b5a6d6d9ab333bef47ba806025",
@@ -219,7 +219,7 @@
       "author": null,
       "description": "[53HCSC] Study Hub @ Common Room Hey Hwa Chong! 📚As Prelims and Promos draw closer, many of us are looking for a conducive space to study and prepare fo... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-08-19T06:12:57.363670+08:00"
+      "pub_date": "2026-08-19T08:41:45.304842+08:00"
     },
     {
       "id": "95d5ffc8530b9d08bd5bd2dfe88c1233d0caafde263577ae104a1f96b20b918c",
@@ -229,7 +229,7 @@
       "author": null,
       "description": "[Makerspace] NFC Workshop Hey Hwa Chong!Do you know why your EZ-link card can unlock doors, or&nbsp;store balances?&nbsp;Want to personalise your... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-08-19T06:12:57.361931+08:00"
+      "pub_date": "2026-08-19T08:41:45.302689+08:00"
     },
     {
       "id": "6a1d8e0a6ba77cdcde50036f24464422bc77b603a11a42560c3b4ff14f3fdf9b",
@@ -239,7 +239,7 @@
       "author": null,
       "description": "[Jingxian Library] Closed on 20th August, Thursday for a staff event. Dear Students,&nbsp;Please note that Jingxian Library will be closed on 20th August, Thursday for a staff event.&nbsp;Th... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-08-19T06:12:57.360149+08:00"
+      "pub_date": "2026-08-19T08:41:45.300518+08:00"
     },
     {
       "id": "e42e2b3dd23399d7a334f11a1a40918e9f96f7e74b4258d67b7081032b016b86",
@@ -249,7 +249,7 @@
       "author": null,
       "description": "⭐ TEACHERS’ DAY CELEBRATIONS 2026: WRITTEN IN THE STARS ⭐ HELLOOO HWA CHONG! 🌠Teachers’ Day is just around the corner! Besides our Teachers’ Day Concert, TDCo has prepared sever... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-08-19T06:12:57.349592+08:00"
+      "pub_date": "2026-08-19T08:41:45.287469+08:00"
     }
   ]
 }
