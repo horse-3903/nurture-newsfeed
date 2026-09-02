@@ -109,7 +109,8 @@ nurture-newsfeed/
 ├── .github/
 │   └── workflows/
 │       ├── rss.yml                       # Main scheduled workflow (hourly)
-│       └── test-email.yml                # Test email workflow
+│       ├── test-email.yml                # Test email workflow
+│       └── update-recipients.yml         # Update EMAIL_RECIPIENTS from the Actions tab
 ├── src/
 │   ├── generate_feed.py                  # Scraper + RSS generation + email
 │   ├── login_once.py                     # One-time manual login helper
@@ -154,7 +155,25 @@ Recipients can be configured via:
 2. `EMAIL_RECIPIENTS_FILE` environment variable pointing to a file path
 3. `email_recipients.txt` in the repo root (gitignored, local only)
 
-**Optional: auto-sync recipients on commit**
+### Fastest way: update recipients from the Actions tab
+
+Instead of editing the secret by hand, use the **Update Email Recipients** workflow — paste an email list into a form in the GitHub UI and it updates the `EMAIL_RECIPIENTS` secret for you.
+
+**One-time setup:**
+1. Create a personal access token with permission to manage this repo's Actions secrets (a fine-grained token scoped to this repo with "Secrets" write access, or a classic token with `repo` scope).
+2. Add it as a repository secret named `SECRETS_ADMIN_TOKEN` (**Settings → Secrets and variables → Actions → New repository secret**).
+
+**Every time you want to change recipients:**
+1. Go to **Actions → Update Email Recipients → Run workflow**.
+2. Paste the email addresses (comma, semicolon, or newline separated).
+3. Click **Run workflow**.
+
+Bookmark this direct link for one-click access:
+```
+https://github.com/<owner>/<repo>/actions/workflows/update-recipients.yml
+```
+
+**Alternative: auto-sync recipients on commit**
 ```bash
 python src/install_email_secret_hook.py
 ```

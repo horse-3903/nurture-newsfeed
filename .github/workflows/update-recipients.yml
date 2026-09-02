@@ -1,0 +1,70 @@
+name: Update Email Recipients
+
+on:
+  workflow_dispatch:
+    inputs:
+      recipients:
+        description: "Email addresses (comma, semicolon, or newline separated). Replaces the current list."
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  update-recipients:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Normalize recipients
+        id: normalize
+        env:
+          RECIPIENTS_INPUT: ${{ inputs.recipients }}
+        run: |
+          python - <<'PY'
+          import os
+          import sys
+          sys.path.insert(0, "src")
+          from nurture_feed.utils import parse_recipients
+
+          raw = os.environ["RECIPIENTS_INPUT"]
+          recipients = parse_recipients(raw)
+
+          if not recipients:
+              print("::error::No valid recipients found in input.")
+              sys.exit(1)
+
+          invalid = [r for r in recipients if "@" not in r or r.startswith("@") or r.endswith("@")]
+          if invalid:
+              print(f"::error::Invalid email address(es): {', '.join(invalid)}")
+              sys.exit(1)
+
+          with open("recipients.normalized.txt", "w") as f:
+              f.write("\n".join(recipients) + "\n")
+
+          print(f"Normalized {len(recipients)} recipient(s):")
+          for r in recipients:
+              print(f"  - {r}")
+          PY
+
+      - name: Set EMAIL_RECIPIENTS secret
+        env:
+          GH_TOKEN: ${{ secrets.SECRETS_ADMIN_TOKEN }}
+        run: |
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "::error::SECRETS_ADMIN_TOKEN is not set. Add a repo-scoped personal access token with that name (see README > Recipient Management) so this workflow can write the EMAIL_RECIPIENTS secret."
+            exit 1
+          fi
+          gh secret set EMAIL_RECIPIENTS --repo "${{ github.repository }}" < recipients.normalized.txt
+          echo "Updated EMAIL_RECIPIENTS secret."
