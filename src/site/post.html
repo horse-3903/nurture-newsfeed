@@ -4,17 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Announcement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="page-shell page-shell--narrow">
-      <header class="post-header">
-        <a class="back-link" href="./">← All announcements</a>
-        <a class="rss-link" href="./feed.xml">RSS</a>
+      <header class="masthead">
+        <div class="masthead__row">
+          <a class="masthead__logo" href="./">
+            <span class="masthead__mark" aria-hidden="true">N</span>
+            <span class="masthead__wordmark">The Nurture Bulletin</span>
+          </a>
+          <a class="rss-link" href="./feed.xml">RSS</a>
+        </div>
       </header>
 
+      <div class="post-header">
+        <a class="back-link" href="./">&larr; Back to front page</a>
+      </div>
+
       <section id="postError" class="state-card state-card--error hidden" role="alert"></section>
-      <section id="postLoading" class="state-card">Loading announcement...</section>
+      <section id="postLoading" class="state-card">Fetching this dispatch&hellip;</section>
 
       <article id="postCard" class="post-card hidden">
         <div class="post-card__meta">
@@ -25,7 +40,7 @@
         <div id="postBody" class="post-card__body"></div>
         <div class="post-card__footer">
           <a id="sourceLink" class="rss-link" href="#" target="_blank" rel="noopener noreferrer">
-            Open on Nurture
+            Open on Nurture &nearr;
           </a>
         </div>
       </article>
@@ -33,5 +48,4 @@
 
     <script src="./post.js" defer></script>
   </body>
-  </html>
-
+</html>

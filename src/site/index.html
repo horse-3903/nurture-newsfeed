@@ -3,76 +3,63 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nurture Announcements</title>
+    <title>The Nurture Bulletin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="bg-orb bg-orb--a" aria-hidden="true"></div>
-    <div class="bg-orb bg-orb--b" aria-hidden="true"></div>
-
     <main class="page-shell">
-      <header class="app-header">
-        <div class="brand">
-          <div class="brand__mark" aria-hidden="true">N</div>
-          <div class="brand__copy">
-            <p class="brand__eyebrow">Nurture Feed</p>
-            <h1>Announcements</h1>
+      <header class="masthead">
+        <div class="masthead__row">
+          <a class="masthead__logo" href="./">
+            <span class="masthead__mark" aria-hidden="true">N</span>
+            <span class="masthead__wordmark">The Nurture Bulletin</span>
+          </a>
+          <div class="masthead__actions">
+            <button id="themeToggle" class="btn" type="button" aria-pressed="false">Night Edition</button>
+            <a class="btn btn--solid" href="./feed.xml">RSS Feed</a>
           </div>
         </div>
-        <div class="header-actions">
-          <button id="themeToggle" class="btn btn--ghost" type="button" aria-pressed="false">
-            Dark mode
-          </button>
-          <a class="btn btn--primary" href="./feed.xml">RSS XML</a>
+        <div class="masthead__strip">
+          <span>Internal Announcements</span>
+          <span class="masthead__divider" aria-hidden="true">&mdash;</span>
+          <span id="updatedPill"></span>
+          <span class="masthead__divider" aria-hidden="true">&mdash;</span>
+          <span id="countPill" class="masthead__count">Loading&hellip;</span>
         </div>
       </header>
 
-      <section class="hero-panel">
-        <div class="hero-panel__copy">
-          <p class="hero-panel__kicker">Live mirror</p>
-          <h2>Fast, searchable announcement feed for Nurture</h2>
-          <p>
-            Updated by GitHub Actions, rendered from cached announcement data, and linked directly to the original
-            Nurture announcement pages.
-          </p>
-        </div>
-        <div class="hero-panel__stats" id="metaBar">
-          <div class="stat-card">
-            <span class="stat-card__label">Announcements</span>
-            <span id="countPill" class="stat-card__value">Loading...</span>
-          </div>
-          <div class="stat-card stat-card--wide">
-            <span class="stat-card__label">Last sync</span>
-            <span id="updatedPill" class="stat-card__value stat-card__value--muted"></span>
-          </div>
-        </div>
-      </section>
-
       <section class="toolbar">
         <label class="search-box" for="searchInput">
-          <span class="search-box__icon" aria-hidden="true">⌕</span>
-          <input id="searchInput" type="search" placeholder="Search title, content, author, or relative time..." />
+          <span class="search-box__label">Search the archive</span>
+          <input id="searchInput" type="search" placeholder="Title, body, author, or “3 hours ago”&hellip;" />
         </label>
       </section>
 
       <section id="errorBox" class="state-card state-card--error hidden" role="alert"></section>
-      <section id="loadingBox" class="state-card">Loading announcements...</section>
+      <section id="loadingBox" class="state-card">Fetching the latest dispatches&hellip;</section>
 
       <section id="cardsGrid" class="cards-grid hidden" aria-live="polite"></section>
-      <section id="emptyState" class="state-card hidden">No announcements match your search.</section>
+      <section id="emptyState" class="state-card hidden">No dispatches match your search.</section>
     </main>
 
     <template id="cardTemplate">
       <article class="card">
         <a class="card__link" href="#">
-          <div class="card__body">
-            <h2 class="card__title"></h2>
-            <p class="card__desc"></p>
+          <span class="card__index" aria-hidden="true"></span>
+          <div class="card__content">
             <div class="card__meta">
               <span class="card__date"></span>
               <span class="card__author hidden"></span>
             </div>
-            <span class="card__cta" aria-hidden="true">Open ↗</span>
+            <h2 class="card__title"></h2>
+            <p class="card__desc"></p>
+            <span class="card__cta" aria-hidden="true">Read full dispatch &rarr;</span>
           </div>
         </a>
       </article>
@@ -80,4 +67,4 @@
 
     <script src="./app.js" defer></script>
   </body>
-  </html>
+</html>
