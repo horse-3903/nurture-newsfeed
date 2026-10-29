@@ -30,7 +30,7 @@ or `--browser chromium` to use something else, or `--opera-path` if Opera GX
 isn't auto-detected). Complete Google login manually in that window.
 
 The script polls the page URL and detects on its own once you're off the
-Google/login pages and onto the announcements page — no need to switch back
+Google/login pages and onto the announcements page, no need to switch back
 to the terminal. It gives up and warns after `--login-timeout-ms` (default
 5 minutes) if login never completes.
 

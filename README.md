@@ -18,13 +18,13 @@ Serverless RSS feed generator for the Google OAuth-protected Nurture announcemen
 
 **nurture-newsfeed** automates monitoring of the Google OAuth-protected Nurture announcements page by scraping it with Playwright, generating an RSS feed, and sending email notifications for new announcements. A GitHub Actions workflow runs every hour to keep the feed up to date, with the resulting `feed.xml` hosted via GitHub Pages.
 
-This project does **not** bypass Google OAuth — you log in manually once, persist the authenticated browser state as a secret, and the automation uses that session going forward.
+This project does **not** bypass Google OAuth, you log in manually once, persist the authenticated browser state as a secret, and the automation uses that session going forward.
 
 ## Features
 
 - Hourly GitHub Actions workflow that scrapes the authenticated Nurture announcements page
 - RSS feed (`feed.xml`) published via GitHub Pages
-- Change detection via `cache.json` — only new announcements trigger emails
+- Change detection via `cache.json`: only new announcements trigger emails
 - Email notifications via Gmail SMTP (optional)
 - Flexible recipient management via GitHub Secret, local file, or both
 - Optional post-commit hook to sync recipients to GitHub Secrets automatically
@@ -44,9 +44,9 @@ This project does **not** bypass Google OAuth — you log in manually once, pers
 
 - Python 3.10+
 - A GitHub account with Actions enabled
-- A Gmail account (for email notifications — optional)
+- A Gmail account (for email notifications, optional)
 
-### Step 1 — One-Time Local Login
+### Step 1: One-Time Local Login
 
 This step saves your authenticated browser session so the workflow can use it without storing credentials.
 
@@ -59,7 +59,7 @@ python src/login_once.py
 
 A browser window will open. Complete Google login and navigate to the Nurture announcements page, then return to the terminal and press **Enter**. This saves `auth.json` (gitignored).
 
-### Step 2 — Encode `auth.json` as a GitHub Secret
+### Step 2: Encode `auth.json` as a GitHub Secret
 
 **Windows (PowerShell):**
 ```powershell
@@ -71,7 +71,7 @@ A browser window will open. Complete Google login and navigate to the Nurture an
 base64 < auth.json | tr -d '\n'
 ```
 
-### Step 3 — Configure GitHub Secrets
+### Step 3: Configure GitHub Secrets
 
 Go to **Settings → Secrets and variables → Actions → New repository secret** and create:
 
@@ -79,18 +79,18 @@ Go to **Settings → Secrets and variables → Actions → New repository secret
 |--------|-------|
 | `AUTH_JSON` | Base64-encoded contents of `auth.json` |
 | `EMAIL_SENDER` | Gmail address to send from (optional) |
-| `EMAIL_PASSWORD` | Gmail App Password — not your regular password (optional) |
+| `EMAIL_PASSWORD` | Gmail App Password, not your regular password (optional) |
 | `EMAIL_RECIPIENTS` | Comma- or newline-separated list of recipient emails (optional) |
 
 If email secrets are omitted, feed generation still runs and email is silently skipped.
 
-### Step 4 — Deploy
+### Step 4: Deploy
 
 1. Push the repository to GitHub.
 2. Go to **Actions → Generate RSS Feed → Run workflow** to test manually.
 3. Confirm `feed.xml` and `cache.json` are created/updated.
 
-### Step 5 — Enable GitHub Pages (to host `feed.xml`)
+### Step 5: Enable GitHub Pages (to host `feed.xml`)
 
 1. Go to **Settings → Pages**
 2. Set source to **Deploy from a branch**
@@ -139,7 +139,7 @@ python src/test_extraction.py --limit 3 --enrich-details
 python src/generate_feed.py
 ```
 
-**Adjust the schedule** — edit `.github/workflows/rss.yml`:
+**Adjust the schedule**: edit `.github/workflows/rss.yml`:
 ```yaml
 on:
   schedule:
@@ -150,7 +150,7 @@ on:
 
 Recipients can be configured via:
 
-1. `EMAIL_RECIPIENTS` GitHub Secret (preferred) — supports commas, semicolons, or newlines; comments (`#`) are ignored
+1. `EMAIL_RECIPIENTS` GitHub Secret (preferred): supports commas, semicolons, or newlines; comments (`#`) are ignored
 2. `EMAIL_RECIPIENTS_FILE` environment variable pointing to a file path
 3. `email_recipients.txt` in the repo root (gitignored, local only)
 
@@ -174,8 +174,8 @@ def get_selector_config() -> dict[str, list[str]]:
     }
 ```
 
-Place the most specific selector first; keep 1–2 fallbacks.
+Place the most specific selector first; keep 1-2 fallbacks.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License: see [LICENSE](LICENSE) for details.
