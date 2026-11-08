@@ -1,16 +1,6 @@
 {
-  "updated_at_utc": "2026-11-07T23:16:31.510354+00:00",
+  "updated_at_utc": "2026-11-08T03:31:22.248404+00:00",
   "items": [
-    {
-      "id": "dac2685ddcb714f99cc013f93c712ae05735e1f9bfbb4bd06b9cd14f0576ccff",
-      "title": "Koo Lay Hwa",
-      "link": "https://nurture.diveanalytics.com/announcements/1535",
-      "source_id": "1535",
-      "author": null,
-      "description": "[Kong Chian Library] We Are Open During The Year-End Holidays 2 days ago",
-      "pub_date_raw": "2 days ago",
-      "pub_date": "2026-11-06T07:16:31.479294+08:00"
-    },
     {
       "id": "93a8160c1b843e72a5be2c0a8eac7b0265dad8c6e577386966f495b7a72082a2",
       "title": "Justin Arif Prawiradiraja",
@@ -19,7 +9,7 @@
       "author": null,
       "description": "[ECG] Monthly Communication (November and December 2026) Dear Students,Please read up on our latest monthly ECG communication by clicking the link below.ECG Monthly Communicatio... 2 days ago",
       "pub_date_raw": "2 days ago",
-      "pub_date": "2026-11-06T07:16:31.477875+08:00"
+      "pub_date": "2026-11-06T11:31:22.215929+08:00"
     },
     {
       "id": "0d13c376137f28d17a66675189e782e12359ba65d5f10fa12b866d81f3e363e9",
@@ -29,27 +19,7 @@
       "author": null,
       "description": "[ECG] LASALLE Dance Workshop | 14 November 2026 Dear Students,Please note that LASALLE is hosting a dance workshop on Saturday, 14 November 2026. This is suitable for t... 2 days ago",
       "pub_date_raw": "2 days ago",
-      "pub_date": "2026-11-06T07:16:31.328596+08:00"
-    },
-    {
-      "id": "7e204b7e08db304712f19e4908f205678fdb68d3a1c7ce689bff63c7673d03ea",
-      "title": "Lee Pui Wah",
-      "link": "https://nurture.diveanalytics.com/announcements/1531",
-      "source_id": "1531",
-      "author": null,
-      "description": "[Library] Discover our New Book : Lee Hsien Loong and Singapore Dear Students,What does it take to lead a nation through changing times and shape its future?Step into the world of Sing... 3 days ago",
-      "pub_date_raw": "3 days ago",
-      "pub_date": "2026-11-05T07:16:31.482867+08:00"
-    },
-    {
-      "id": "f7c824e42c0312b3078fe9445abe0abc93033b63b126d6c514ffaab0414c59c1",
-      "title": "Justin Arif Prawiradiraja",
-      "link": "https://nurture.diveanalytics.com/announcements/1532",
-      "source_id": "1532",
-      "author": null,
-      "description": "[ECG] SUSS Campus Exploration Day 2026 (Fri, 27 Nov, 2:30 PM – 4:30 PM) Dear Students,Please take note that SUSS is hosting Campus Exploration Day 2026 on Friday, 27 November 2026 at 2.30PM -... 3 days ago",
-      "pub_date_raw": "3 days ago",
-      "pub_date": "2026-11-05T07:16:31.481704+08:00"
+      "pub_date": "2026-11-06T11:31:22.074184+08:00"
     },
     {
       "id": "af56caff51c0401753d12c7cb284261094ebe35a960e9d298c33af996019759f",
@@ -59,7 +29,17 @@
       "author": null,
       "description": "[Jingxian Library] Closed on 11th November 2026 for staff meeting Dear Students,Jingxian Library will be closed on 11th November 2026 for a staff meeting.You are welcome to Kong Chian Li... 3 days ago",
       "pub_date_raw": "3 days ago",
-      "pub_date": "2026-11-05T07:16:31.480494+08:00"
+      "pub_date": "2026-11-05T11:31:22.218441+08:00"
+    },
+    {
+      "id": "dac2685ddcb714f99cc013f93c712ae05735e1f9bfbb4bd06b9cd14f0576ccff",
+      "title": "Koo Lay Hwa",
+      "link": "https://nurture.diveanalytics.com/announcements/1535",
+      "source_id": "1535",
+      "author": null,
+      "description": "[Kong Chian Library] We Are Open During The Year-End Holidays 3 days ago",
+      "pub_date_raw": "3 days ago",
+      "pub_date": "2026-11-05T11:31:22.217226+08:00"
     },
     {
       "id": "c01cfee562f974f1fed5f757f728a03803d182372532cdb28bfdde893737427d",
@@ -69,7 +49,27 @@
       "author": null,
       "description": "[ECG] You are invited to DigiPen Day 2027 On behalf of Digipen.RSVP today and join us at DigiPen Day 2027!Join us for an afternoon at the SIT Campus to discover m... 4 days ago",
       "pub_date_raw": "4 days ago",
-      "pub_date": "2026-11-04T07:16:31.484013+08:00"
+      "pub_date": "2026-11-04T11:31:22.221993+08:00"
+    },
+    {
+      "id": "7e204b7e08db304712f19e4908f205678fdb68d3a1c7ce689bff63c7673d03ea",
+      "title": "Lee Pui Wah",
+      "link": "https://nurture.diveanalytics.com/announcements/1531",
+      "source_id": "1531",
+      "author": null,
+      "description": "[Library] Discover our New Book : Lee Hsien Loong and Singapore Dear Students,What does it take to lead a nation through changing times and shape its future?Step into the world of Sing... 4 days ago",
+      "pub_date_raw": "4 days ago",
+      "pub_date": "2026-11-04T11:31:22.220835+08:00"
+    },
+    {
+      "id": "f7c824e42c0312b3078fe9445abe0abc93033b63b126d6c514ffaab0414c59c1",
+      "title": "Justin Arif Prawiradiraja",
+      "link": "https://nurture.diveanalytics.com/announcements/1532",
+      "source_id": "1532",
+      "author": null,
+      "description": "[ECG] SUSS Campus Exploration Day 2026 (Fri, 27 Nov, 2:30 PM – 4:30 PM) Dear Students,Please take note that SUSS is hosting Campus Exploration Day 2026 on Friday, 27 November 2026 at 2.30PM -... 4 days ago",
+      "pub_date_raw": "4 days ago",
+      "pub_date": "2026-11-04T11:31:22.219662+08:00"
     },
     {
       "id": "5a7c81ec504ff40e5aa7a16a78d80df3304bd1a4fb2f7c62067c86df4942d505",
@@ -79,7 +79,7 @@
       "author": null,
       "description": "MEDMORALS SIGNUPS ARE OPEN HEY HWA CHONG! 💛💙❤️💚We are pleased to share MedMorals 2027: Debating Moral Dilemmas in Medicine, a student-led nation... 5 days ago",
       "pub_date_raw": "5 days ago",
-      "pub_date": "2026-11-03T07:16:31.486392+08:00"
+      "pub_date": "2026-11-03T11:31:22.224363+08:00"
     },
     {
       "id": "e877676b97a42bffb5dde5df7ce14a9865508e9e30d10feafe9b585315e45e06",
@@ -89,17 +89,7 @@
       "author": null,
       "description": "[Kong Chian Library} Closure of Library for YES on 4, 5 & 6 November 2026 5 days ago",
       "pub_date_raw": "5 days ago",
-      "pub_date": "2026-11-03T07:16:31.485165+08:00"
-    },
-    {
-      "id": "61178de707ca40f9e654b621698aeeb03d5794fa7ec1d3716327a18b361c8b6d",
-      "title": "Wang Dakun",
-      "link": "https://nurture.diveanalytics.com/announcements/1489",
-      "source_id": "1489",
-      "author": null,
-      "description": "惊魂之旅：HwaChella 华岗剧坊鬼屋邀你挑战极限 同学们， 你们是否在考试后感到无聊？你们是否想要体验一次惊心动魄的鬼屋之旅？这次华岗剧坊为HwaChella精心准备的鬼屋体验一定... 1 week ago",
-      "pub_date_raw": "1 week ago",
-      "pub_date": "2026-11-01T07:16:31.495624+08:00"
+      "pub_date": "2026-11-03T11:31:22.223156+08:00"
     },
     {
       "id": "16d088174ecbc9fd8c540f8b8056e5c8e02d9e61082b0cee36f01ac4531c1103",
@@ -109,7 +99,7 @@
       "author": null,
       "description": "[Library] Early Closure of Libraries on 30 October 2026 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-11-01T07:16:31.494514+08:00"
+      "pub_date": "2026-11-01T11:31:22.232298+08:00"
     },
     {
       "id": "57ab4ad25e56965d6594b73322ea71bcb4f8818753e6a966d566fba451158271",
@@ -119,7 +109,7 @@
       "author": null,
       "description": "[ECG] Study in Europe Fair - Sat, 21 November 2026 Dear Students, Please take note that there is a Study in Europe Fair which will be held on the following:Date: Saturday,... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-11-01T07:16:31.493389+08:00"
+      "pub_date": "2026-11-01T11:31:22.231177+08:00"
     },
     {
       "id": "3a5a335c2bda7c4a28660c47fd6d7755a026e22efcb0b87d8101e1e0b4835d35",
@@ -129,7 +119,7 @@
       "author": null,
       "description": "Chit Chat Session with our alumnus Mr Nelson Chia, Award-Winning Theatre Practitioner What does it take to pursue your passion, find your artistic voice, and build a theatre company in Singapore? Join us as... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-11-01T07:16:31.492265+08:00"
+      "pub_date": "2026-11-01T11:31:22.230063+08:00"
     },
     {
       "id": "0cbd61326db0698f3a51334031f45076f0ea2546a2e5c15870c270d55f765f3e",
@@ -139,7 +129,7 @@
       "author": null,
       "description": "[AEP] Congratulations to Fong Jin En, Matthew for being selected as one of the Top 20 students in the Lions International Peace Poster Contest 2026! Congratulations to Fong Jin En, Matthew (1-I1) for being selected as one of the Top 20 students in the Lions Internation... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-11-01T07:16:31.491095+08:00"
+      "pub_date": "2026-11-01T11:31:22.228940+08:00"
     },
     {
       "id": "9ce32d248bcd969bf6c487f7d8b7c2e7083b9b5df0b877a9d4096a85664ad448",
@@ -149,7 +139,7 @@
       "author": null,
       "description": "[ECG] Invitation to Discover NTU Humanities: Beyond One Discipline Event, 16 Jan 2027 Posted on behalf of NTU School of HumanitiesGreetings from NTU School of Humanities!We are organising an informative eve... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-11-01T07:16:31.489915+08:00"
+      "pub_date": "2026-11-01T11:31:22.227811+08:00"
     },
     {
       "id": "e6cfafd191f3473175af4f0893f03df7e99037a858ae9b40639cf12afe516d80",
@@ -159,7 +149,7 @@
       "author": null,
       "description": "[ECG] University of St. Andrews (UK) - Undergraduate Online Information Session (Mon, 2 Nov 2026) Dear Students, Please take note that the University of St. Andrews (UK) is hosting an Undergraduate Online Information S... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-11-01T07:16:31.488690+08:00"
+      "pub_date": "2026-11-01T11:31:22.226671+08:00"
     },
     {
       "id": "ca4274a6d29bb3d95c89c744faa787688e91619a4ebf844da06c64cbc966ea8d",
@@ -169,7 +159,7 @@
       "author": null,
       "description": "Volunteer for CDC Vouchers Launch 2027! Hey Hwa Chong!Ever felt like learning more about CDC Vouchers, or just interested in serving the community? Then this vo... 1 week ago",
       "pub_date_raw": "1 week ago",
-      "pub_date": "2026-11-01T07:16:31.487524+08:00"
+      "pub_date": "2026-11-01T11:31:22.225521+08:00"
     },
     {
       "id": "a0a8fdc698029dddd241958aab7f18baa8ef0f79c9160c72a9965e184bdfbb6b",
@@ -179,7 +169,7 @@
       "author": null,
       "description": "[SL] Calling for volunteers for The Warmth Project Expo Hey Hwachong! Want to take part in the effort to support the elderly around us? Need a platform to publicise your servic... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-10-25T07:16:31.504703+08:00"
+      "pub_date": "2026-10-25T11:31:22.242599+08:00"
     },
     {
       "id": "9af237616b54279b067d07f4f2cdc6086e320801c024d72929bc5ae90ae441a5",
@@ -189,7 +179,7 @@
       "author": null,
       "description": "[ECG] Register for NTU College of Computing and Data Science Pathways in Python 2027 The College of Computing and Data Science at Nanyang Technological University is inviting students from Hwa Chong Instit... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-10-25T07:16:31.503572+08:00"
+      "pub_date": "2026-10-25T11:31:22.241449+08:00"
     },
     {
       "id": "53259794fcda42e1b67ae327ec4e482e41f7b8cb6494b0e686ed27edf2f49c83",
@@ -199,7 +189,7 @@
       "author": null,
       "description": "Information Session For MOE H3 Econs Program Mon 26th Oct 4pm-5pm Dear JC1 Economics students,Understand you will be getting your H2 Economics Promotional Results this coming Friday. Fo... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-10-25T07:16:31.502451+08:00"
+      "pub_date": "2026-10-25T11:31:22.240313+08:00"
     },
     {
       "id": "246813c778b7a271a80abf1f3bfbde26352eed0dae4b494eaf96e6fc430147e7",
@@ -209,7 +199,7 @@
       "author": null,
       "description": "[ECG] Invitation for a Side of Singapore Students Don’t Usually Get to See | MOM’s Holiday Experiential Programme (HEP) 2026 Message posted on behalf of MOMThis November, the Ministry of Manpower (MOM) invites your students to step beyond the cl... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-10-25T07:16:31.501304+08:00"
+      "pub_date": "2026-10-25T11:31:22.239153+08:00"
     },
     {
       "id": "0693bb9c9304a6d049a5a454e17afe9cc6ead0383b9b43f3431ec40f4f42bb9f",
@@ -219,7 +209,7 @@
       "author": null,
       "description": "[VIA] Recruitment for Volunteers (Project Noeul) Nothing to do next weekend? HELLO, we are Project Noeul, a group of students working with Ren Ci Community Hospital to s... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-10-25T07:16:31.500152+08:00"
+      "pub_date": "2026-10-25T11:31:22.238006+08:00"
     },
     {
       "id": "05bb2ad58c7184116163b711383224489adc6497e3b4b57810e86c32f27e94a7",
@@ -229,7 +219,7 @@
       "author": null,
       "description": "OE Module - UG students involvement Hi all, please note that the following Sec 3 St John cadets will be excused from FOSHA on 26/10 and 27/10. They are inv... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-10-25T07:16:31.499034+08:00"
+      "pub_date": "2026-10-25T11:31:22.236871+08:00"
     },
     {
       "id": "d36ce625d0fe965c9104b4bb4c36bedd96aa0fc0929e4ae1da4eacb4b4ba99d9",
@@ -239,7 +229,7 @@
       "author": null,
       "description": "[ECG] NUS CDE Industry Talk - From Lab to Life: RNA Innovation in Cancer Detection From Lab to Life: RNA Innovation in Cancer Detection28 October 2026(CDE Campus)How does scientific research lead to inno... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-10-25T07:16:31.497890+08:00"
+      "pub_date": "2026-10-25T11:31:22.235746+08:00"
     },
     {
       "id": "5167daff094ce39fd4bf1ffe4dd37981e584d1bf6479349bce539ff06f7af3cb",
@@ -249,7 +239,17 @@
       "author": null,
       "description": "[ECG] NUS CDE - Sustainable Housing Materials and Technology Youth Programme On behalf of NUS College of Design and Engineering Sustainable Housing Materials &amp; Technology Youth Programme8 – 11... 2 weeks ago",
       "pub_date_raw": "2 weeks ago",
-      "pub_date": "2026-10-25T07:16:31.496731+08:00"
+      "pub_date": "2026-10-25T11:31:22.234616+08:00"
+    },
+    {
+      "id": "61178de707ca40f9e654b621698aeeb03d5794fa7ec1d3716327a18b361c8b6d",
+      "title": "Wang Dakun",
+      "link": "https://nurture.diveanalytics.com/announcements/1489",
+      "source_id": "1489",
+      "author": null,
+      "description": "惊魂之旅：HwaChella 华岗剧坊鬼屋邀你挑战极限 同学们， 你们是否在考试后感到无聊？你们是否想要体验一次惊心动魄的鬼屋之旅？这次华岗剧坊为HwaChella精心准备的鬼屋体验一定... 2 weeks ago",
+      "pub_date_raw": "2 weeks ago",
+      "pub_date": "2026-10-25T11:31:22.233426+08:00"
     }
   ]
 }
